@@ -1,8 +1,11 @@
-example_id                             | status | run_time        |
--------------------------------------- | ------ | --------------- |
-./spec/log_parser_spec.rb[1:1]         | passed | 0.00062 seconds |
-./spec/logfile_handler_spec.rb[1:1:1]  | passed | 0.00589 seconds |
-./spec/logfile_reader_spec.rb[1:1:1:1] | passed | 0.00109 seconds |
-./spec/logfile_reader_spec.rb[1:2:1]   | passed | 0.00018 seconds |
-./spec/logfile_reader_spec.rb[1:3:1]   | passed | 0.00027 seconds |
-./spec/logfile_reader_spec.rb[1:4:1]   | passed | 0.00025 seconds |
+example_id                              | status | run_time        |
+--------------------------------------- | ------ | --------------- |
+./spec/log_parser_spec.rb[1:1]          | passed | 0.00111 seconds |
+./spec/logfile_handler_spec.rb[1:1:1]   | passed | 0.01196 seconds |
+./spec/logfile_handler_spec.rb[1:2:1]   | passed | 0.004 seconds   |
+./spec/logfile_handler_spec.rb[1:2:2]   | passed | 0.00121 seconds |
+./spec/logfile_handler_spec.rb[1:2:3:1] | passed | 0.00034 seconds |
+./spec/logfile_reader_spec.rb[1:1:1:1]  | passed | 0.00196 seconds |
+./spec/logfile_reader_spec.rb[1:2:1]    | passed | 0.0001 seconds  |
+./spec/logfile_reader_spec.rb[1:3:1]    | passed | 0.00021 seconds |
+./spec/logfile_reader_spec.rb[1:4:1]    | passed | 0.00057 seconds |

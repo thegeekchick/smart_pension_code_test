@@ -23,4 +23,12 @@ RSpec.describe LogParser::LogFileReader do
         .to raise_error(ArgumentError)
     end
   end
+  let(:reader) { described_class.new(file) }
+  let(:file) { File.expand_path("../fixtures/log_file.log", __FILE__) }
+
+  describe 'reads file' do
+    subject(:lines) { reader.lines }
+    let(:expected_lines) { ["line1", "line2", "line3"] }
+    it { is_expected.to eql(expected_lines) }
+  end  
 end

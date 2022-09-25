@@ -1,5 +1,5 @@
 
-RSpec.describe LogParser::LogFileReader do
+RSpec.describe LogParser::LogfileReader do
   describe '.new' do 
     describe 'without a file argument' do
       it 'raises an error' do

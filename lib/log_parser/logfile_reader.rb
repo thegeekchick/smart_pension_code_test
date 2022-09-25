@@ -1,5 +1,5 @@
 module LogParser
-  class LogFileReader
+  class LogfileReader
     def initialize(file)
       raise ArgumentError, 'File Empty' if file.nil?
       raise ArgumentError, 'File does not exist' unless File.exist?(file)

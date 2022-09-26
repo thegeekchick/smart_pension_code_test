@@ -1,5 +1,5 @@
 module LogParser
-  class Accumulator
+  class MetaCollection
     attr_accessor :total, :unique, :ips
 
     def initialize

@@ -1,5 +1,5 @@
 module LogParser
-  class AggregatorResult < Hash
+  class Resultset < Hash
     def sort_by_total 
       #sort by desc of total viws
       sort_by { |_, views| -views.total }

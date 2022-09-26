@@ -5,7 +5,7 @@ module LogParser
     end
 
     def format
-      Formatter.new(aggregated_data).format
+      Formatter.new(sorted_data).format
     end
 
     
@@ -15,8 +15,8 @@ module LogParser
       LogfileReader.new(@filepath).lines
     end
 
-    def aggregated_data
-      LogfileHandler.new(read_data).aggregate
+    def sorted_data
+      LogfileHandler.new(read_data).meta_sort
     end
 
   end

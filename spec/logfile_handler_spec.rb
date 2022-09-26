@@ -8,8 +8,8 @@ RSpec.describe LogParser::LogfileHandler do
 
  let(:metaobject) { LogParser::LogfileMeta.new("/abc", "1.1.1.1") }
 
- let(:aggregator_result) {
-    LogParser::AggregatorResult[
+ let(:result_set) {
+    LogParser::Resultset[
       "/about" => instance_double(LogParser::LogfileHandler, unique: 5, total: 100),
       "/home" => instance_double(LogParser::LogfileHandler, unique: 10, total: 25),
       "/contact-us" => instance_double(LogParser::LogfileHandler, unique: 2, total: 140)
@@ -32,7 +32,7 @@ describe 'splits file entries into lines and ips' do
   it { is_expected.to eql(expected_entries) } 
 end
   describe 'groups by ips  and path ' do
-    subject(:group) { handler.aggregate }
+    subject(:group) { handler.meta_sort }
 
     it "groups entries by their paths" do
       expect(group.keys).to match_array(['/abc'])

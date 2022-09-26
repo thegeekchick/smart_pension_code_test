@@ -6,10 +6,10 @@ module LogParser
     end
 
         #aggregator logic
-    def aggregate
+    def meta_sort
       entries = split_file_entries
-      entries.each_with_object(AggregatorResult.new) do |entry, collection|
-        collection[entry.path] ||= Accumulator.new
+      entries.each_with_object(Resultset.new) do |entry, collection|
+        collection[entry.path] ||= MetaCollection.new
         collection[entry.path].add(entry)
     end
    end

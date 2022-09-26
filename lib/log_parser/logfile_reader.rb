@@ -5,8 +5,6 @@ module LogParser
       raise ArgumentError, 'File does not exist' unless File.exist?(file)
       @file = file
     end
-#  private
- #   attr_accessor :file
 
   def lines
     File.open(@file, "r") do |f|

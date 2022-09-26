@@ -5,7 +5,6 @@ module LogParser
       @lines = lines
     end
 
-        #aggregator logic
     def meta_sort
       entries = split_file_entries
       entries.each_with_object(Resultset.new) do |entry, collection|
@@ -14,7 +13,6 @@ module LogParser
     end
    end
 
-    #tokenizer logic
     def split_file_entries
       @lines.map do |line|
         LogfileMeta.new(*line.split)

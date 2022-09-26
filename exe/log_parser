@@ -1,3 +1,9 @@
 #!/usr/bin/env ruby
 
+require "bundler/setup"
 require "log_parser"
+
+filepath = ARGV[0] or puts "File not found" && exit
+
+parser = LogParser::Parser.new(filepath)
+puts parser.format
